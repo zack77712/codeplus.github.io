@@ -1,94 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hi Food - Healthy Life</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cremona&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --light: #f7f7d0;
-      --beige: #cbbb97;
-      --sage: #a2b78a;
-      --olive: #5e714a;
-      --forest: #344b2a;
-      font-family: 'Cremona', serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Plus | Programming Education</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #4D44DB;
+            --accent: #FF6584;
+            --dark: #2D3748;
+        }
 
-    body {
-      margin: 0;
-      background-color: var(--light);
-      color: var(--forest);
-    }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    header {
-      background-color: var(--olive);
-      padding: 1.5rem;
-      text-align: center;
-      color: white;
-      font-size: 2rem;
-    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--primary);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
 
-    .container {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      padding: 2rem;
-      gap: 2rem;
-    }
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
 
-    .icon {
-      width: 200px;
-      height: 200px;
-      background-color: var(--sage);
-      border-radius: 20px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      font-size: 1.2rem;
-      color: var(--forest);
-      cursor: pointer;
-      transition: transform 0.4s ease, background-color 0.3s ease;
-    }
+        .logo-container {
+            margin-bottom: 30px;
+        }
 
-    .icon:hover {
-      transform: translateY(-10px);
-      background-color: var(--olive);
-      color: var(--light);
-    }
+        .logo-image {
+            height: 120px;
+            width: auto;
+            margin-bottom: 15px;
+        }
 
-    footer {
-      background-color: var(--forest);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
-  </style>
+        .logo-text {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            width: 220px;
+            padding: 12px 25px;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .social-button:hover {
+            background: var(--accent);
+            transform: translateX(10px);
+        }
+
+        .social-icon {
+            font-size: 1.3rem;
+            width: 30px;
+            text-align: center;
+        }
+
+        .floating-icons {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .floating-icon {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.15;
+            animation: float 15s infinite linear;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0) rotate(0deg);
+            }
+            50% {
+                transform: translate(50px, -30px) rotate(180deg);
+            }
+            100% {
+                transform: translate(0, 0) rotate(360deg);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
-  <header>
-    Hi Food - All About Healthy Eating
-  </header>
+    <div class="main-content">
+        <div class="logo-container">
+            <!-- Your uploaded logo -->
+            <img src="oplk.png" alt="Code Plus Logo" class="logo-image">
+            <div class="logo-text">CODE PLUS</div>
+            <div class="tagline">Programming Education & Web Development</div>
+        </div>
 
-  <div class="container">
-    <div class="icon" onclick="location.href='vegan.html'">
-      Vegan Recipes
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/code.plus.0?igsh=MThoc2w5bG1mbXRsNw==" class="social-button" target="_blank">
+                <span class="social-icon"><i class="fab fa-instagram"></i></span>
+                <span>Instagram</span>
+            </a>
+            <a href="https://www.facebook.com/profile.php?id=61570657457528" class="social-button" target="_blank">
+                <span class="social-icon"><i class="fab fa-facebook-f"></i></span>
+                <span>Facebook</span>
+            </a>
+            <a href="https://www.youtube.com/@Codeplus-z" class="social-button" target="_blank">
+                <span class="social-icon"><i class="fab fa-youtube"></i></span>
+                <span>YouTube</span>
+            </a>
+        </div>
     </div>
-    <div class="icon" onclick="location.href='meat.html'">
-      Meat Lovers Recipes
-    </div>
-    <div class="icon" onclick="location.href='map.html'">
-      Restaurant Finder
-    </div>
-    <div class="icon" onclick="location.href='nutrition.html'">
-      Nutrition Info
-    </div>
-  </div>
 
-  <footer>
-    &copy; 2025 Hi Food. Eat Clean, Live Green.
-  </footer>
+    <div class="floating-icons">
+        <!-- These will be added dynamically with JavaScript -->
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Code Plus . All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Create floating icons
+        const floatingIconsContainer = document.querySelector('.floating-icons');
+        const icons = ['<i class="fab fa-html5"></i>', '<i class="fab fa-css3-alt"></i>', 
+                      '<i class="fab fa-js"></i>', '<i class="fab fa-python"></i>',
+                      '<i class="fas fa-code"></i>', '<i class="fas fa-laptop-code"></i>'];
+
+        for (let i = 0; i < 18; i++) {
+            const icon = document.createElement('div');
+            icon.className = 'floating-icon';
+            icon.innerHTML = icons[Math.floor(Math.random() * icons.length)];
+
+            // Random position
+            icon.style.left = `${Math.random() * 100}%`;
+            icon.style.top = `${Math.random() * 100}%`;
+
+            // Random color
+            icon.style.color = 'white';
+
+            // Random animation duration and delay
+            icon.style.animationDuration = `${10 + Math.random() * 20}s`;
+            icon.style.animationDelay = `${Math.random() * 5}s`;
+            icon.style.fontSize = `${1 + Math.random() * 3}rem`;
+
+            floatingIconsContainer.appendChild(icon);
+        }
+    </script>
 </body>
 </html>
