@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hi Food - Healthy Life</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cremona&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --light: #f7f7d0;
+      --beige: #cbbb97;
+      --sage: #a2b78a;
+      --olive: #5e714a;
+      --forest: #344b2a;
+      font-family: 'Cremona', serif;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--light);
+      color: var(--forest);
+    }
+
+    header {
+      background-color: var(--olive);
+      padding: 1.5rem;
+      text-align: center;
+      color: white;
+      font-size: 2rem;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 2rem;
+      gap: 2rem;
+    }
+
+    .icon {
+      width: 200px;
+      height: 200px;
+      background-color: var(--sage);
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-size: 1.2rem;
+      color: var(--forest);
+      cursor: pointer;
+      transition: transform 0.4s ease, background-color 0.3s ease;
+    }
+
+    .icon:hover {
+      transform: translateY(-10px);
+      background-color: var(--olive);
+      color: var(--light);
+    }
+
+    footer {
+      background-color: var(--forest);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    Hi Food - All About Healthy Eating
+  </header>
+
+  <div class="container">
+    <div class="icon" onclick="location.href='vegan.html'">
+      Vegan Recipes
+    </div>
+    <div class="icon" onclick="location.href='meat.html'">
+      Meat Lovers Recipes
+    </div>
+    <div class="icon" onclick="location.href='map.html'">
+      Restaurant Finder
+    </div>
+    <div class="icon" onclick="location.href='nutrition.html'">
+      Nutrition Info
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Hi Food. Eat Clean, Live Green.
+  </footer>
+</body>
+</html>
